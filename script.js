@@ -1,8 +1,10 @@
-const menuButton = document.getElementById('bar');
-const nav = document.getElementById('b_inicio');
+const bar = document.getElementById('bar');
+const lista = document.querySelectorAll('#b_inicio li');
 
-if (menuButton) {
-  menuButton.addEventListener('click', () => {
-    nav.classList.toggle('activar');
+if (bar) {
+  bar.addEventListener('click', () => {
+    lista.forEach((li) => {
+      li.classList.toggle('activar');
+    });
   });
 }
